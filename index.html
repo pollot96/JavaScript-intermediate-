@@ -1,0 +1,1709 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+      }
+
+      body {
+        margin: 0px;
+        padding: 0px;
+      }
+      /* ------------------------------- NAV BAR ------------------------------------ */
+
+      @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap");
+      .topnav {
+        display: flex;
+        flex-direction: row;
+        height: 80px;
+        top: 0;
+        width: 100%;
+        position: fixed;
+        background-color: #06083c;
+        box-shadow: 0px 9px 5px 5px rgba(6, 8, 60, 0.1);
+        z-index: 1;
+        align-items: center;
+        gap: 100px;
+        transition: all ease 0.5s;
+      }
+
+      .logo img {
+        height: 80px;
+        margin-left: 5vw;
+        margin-top: 6px;
+      }
+
+      .topnav a {
+        text-decoration: none;
+        font-family: "Source Sans Pro", sans-serif;
+        color: #d3d5ff;
+        transition: all ease 0.5s;
+      }
+      .topnav a:hover {
+        color: #7e7f9b;
+      }
+      .nav-wrapper {
+        display: flex;
+        flex-direction: row;
+        gap: 30px;
+      }
+      li {
+        padding: 8px 12px;
+      }
+      li:hover {
+        background-color: #080b57;
+      }
+      .dropdown-menu {
+        background-color: #06083c;
+        border: none;
+        width: 210px;
+      }
+      .divider {
+        border-top: 1px rgba(194, 194, 194, 0.3) solid;
+      }
+      .type-to-search {
+        border-radius: 30px;
+        height: 40px;
+        padding-left: 20px;
+        border: none;
+      }
+      .btn-search {
+        margin-left: -50px;
+        position: absolute;
+        height: 40px;
+        width: 50px;
+        padding: 0;
+        background-color: #cecece;
+        border-bottom-right-radius: 30px;
+        border-top-right-radius: 30px;
+        border: none;
+      }
+      .btn-search:hover {
+        background-color: #06083c;
+      }
+      .material-symbols-outlined {
+        color: white;
+      }
+      /* -------------------------------END NAV BAR ------------------------------------ */
+
+      /* -------------------------------HEADER ------------------------------------ */
+      .headered {
+        background: linear-gradient(to bottom, #f4e400 0%, #ed6e00 100%);
+        height: 100vh;
+        width: 100;
+        overflow: hidden;
+        perspective: 300px;
+      }
+      .scrollTxt {
+        position: absolute;
+        bottom: -12vw;
+        right: 0;
+
+        animation-name: scroll;
+        animation-duration: 50s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+      }
+      .scrollTxt p {
+        color: red;
+        opacity: 0.3;
+        font-family: "Oswald", sans-serif;
+        font-size: 6vw;
+        text-transform: uppercase;
+        line-height: 0;
+        text-align: center;
+        padding-left: 300px;
+        padding-bottom: 70px;
+      }
+      @keyframes scroll {
+        from {
+          transform: rotateX(20deg) rotateZ(30deg);
+        }
+        to {
+          transform: rotateX(20deg) rotateZ(30deg) translateY(66vw);
+        }
+      }
+      /* -------------------------------END HEADER ------------------------------------ */
+      /* -------------------------------THE JOKE OF THE DAY ------------------------------------ */
+
+      /* -------------------------------END THE JOKE OF THE DAY ------------------------------------ */
+
+      /* ------------------------------- TO DO LIST ------------------------------------ */
+
+      /* -------------------------------END TO DO LIST ------------------------------------ */
+    </style>
+  </head>
+  <body>
+    <!-- -----------------------------------NAV BAR ------------------------------------------- -->
+    <nav>
+      <div class="topnav" id="navbar">
+        <div class="logo">
+          <figure>
+            <img
+              class="img-logo"
+              id="logo"
+              src="images/logo.png"
+              alt="the logo"
+            />
+          </figure>
+        </div>
+        <div class="nav-wrapper">
+          <a href="#1" class="navlink" id="linkedlight">Home</a>
+
+          <div class="dropdown">
+            <a href="#4" class="dropdown-toggle" data-toggle="dropdown"
+              >Games <b class="caret"></b
+            ></a>
+            <ul class="dropdown-menu">
+              <li><a href="#5">Find the Number</a></li>
+              <li><a href="#6">Leap Year</a></li>
+              <li><a href="#7">Array of Numbers</a></li>
+              <li><a href="#8">Grow your Number</a></li>
+              <li><a href="#9">Your are Average</a></li>
+              <li class="divider"></li>
+              <li><a href="#13">Reverse the Sentance</a></li>
+              <li><a href="#14">UpperCase Everywhere</a></li>
+              <li><a href="#">Numbers or Letters ?</a></li>
+            </ul>
+          </div>
+          <a href="#2" class="navlink" id="lighteight">Joke of the Day</a>
+          <a href="#3" class="navlink" id="lighteight">My To Do List</a>
+          <div class="dropdown">
+            <a href="#10" class="dropdown-toggle" data-toggle="dropdown"
+              >Calcuator & More <b class="caret"></b
+            ></a>
+            <ul class="dropdown-menu">
+              <li><a href="#10">Calculator</a></li>
+              <li class="divider"></li>
+              <li><a href="#11">Temperature Converter</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="search">
+          <input class="type-to-search" type="text" placeholder="Search" />
+          <button class="btn-search">
+            <span class="material-symbols-outlined"> search </span>
+          </button>
+        </div>
+      </div>
+    </nav>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script>
+      $(".dropdown").hover(
+        function () {
+          $(this)
+            .find(".dropdown-menu")
+            .stop(true, true)
+            .delay(200)
+            .fadeIn(500);
+        },
+        function () {
+          $(this)
+            .find(".dropdown-menu")
+            .stop(true, true)
+            .delay(200)
+            .fadeOut(500);
+        }
+      );
+      var prevScrollpos = window.pageYOffset;
+      window.onscroll = function () {
+        var currentScrollPos = window.pageYOffset;
+        if (prevScrollpos > currentScrollPos) {
+          document.getElementById("navbar").style.top = "0";
+        } else {
+          document.getElementById("navbar").style.top = "-90px";
+        }
+        prevScrollpos = currentScrollPos;
+      };
+    </script>
+    <!-- ----------------------------------- END NAV BAR ------------------------------------------- -->
+
+    <!-- ----------------------------------- HEADER ------------------------------------------- -->
+    <section class="header" id="1">
+      <div class="container-fluid headered">
+        <div class="scrollTxt">
+          <p>Numbers Games</p>
+          <p>Find the Number</p>
+          <p>Leap Year</p>
+          <p>Array of Numbers</p>
+          <p>Grow your Number</p>
+          <p>Your are Average</p>
+          <p>Letters Games</p>
+          <p>Reverse the Sentance</p>
+          <p>UpperCase Everywhere</p>
+          <p>Numbers or Letters ?</p>
+          <p>Joke of the Day</p>
+          <p>My To Do List</p>
+          <p>Calculator</p>
+          <p>Numbers Games</p>
+          <p>Find the Number</p>
+          <p>Leap Year</p>
+          <p>Array of Numbers</p>
+          <p>Grow your Number</p>
+          <p>Your are Average</p>
+          <p>Letters Games</p>
+          <p>Reverse the Sentance</p>
+          <p>UpperCase Everywhere</p>
+          <p>Numbers or Letters ?</p>
+          <p>Joke of the Day</p>
+          <p>My To Do List</p>
+          <p>Calculator</p>
+        </div>
+      </div>
+    </section>
+    <!-- ----------------------------------- END HEADER ------------------------------------------- -->
+    <!-- -----------------------------------  THE JOKE OF THE DAY  ------------------------------------------- -->
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Seymour+One&display=swap");
+      .tjotd {
+        height: 100vh;
+        background-image: linear-gradient(to bottom right, #06072b, #2e3055);
+      }
+      .titler {
+        font-size: 140pt;
+        font-family: "Seymour One", sans-serif;
+        color: #e1e2ff;
+        margin-top: 70px;
+      }
+      .smallies {
+        font-family: "Seymour One", sans-serif;
+        color: #97989c;
+      }
+      .hiddenp {
+        display: none;
+      }
+      .joked {
+        position: relative;
+        height: 400px;
+        width: 500px;
+        flex-direction: column;
+        gap: 100px;
+        margin-top: 220px;
+        margin-left: 150px;
+        padding: 40px;
+        display: none;
+      }
+      .hiddenp {
+        color: black;
+      }
+      .questionned {
+        display: inline-block;
+        color: #7e7f9b;
+      }
+      .responded {
+        position: absolute;
+        text-align: end;
+        bottom: 0;
+        color: #e1e2ff;
+        padding: 40px;
+      }
+      .new-joke {
+        background-color: #f8f9fa;
+        display: none;
+      }
+    </style>
+    <section class="tjotd" id="2">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-6 titles">
+            <h1 class="titler">The Joke Of The Day</h1>
+            <h3 class="smallies">Here you can read the joke of the day.</h3>
+            <h4 class="smallies">
+              Or you can choose to read a random joke from our library
+            </h4>
+          </div>
+          <div class="col-md-6">
+            <div class="new-joke">
+              <h3>Upload a new joke</h3>
+              <label for="question">Question</label>
+              <input class="question" type="text" name="question" />
+              <label for="response">Response</label>
+              <input class="response" type="text" name="response" />
+              <button class="add-joke" onclick="add()">Add</button>
+              <p class="hiddenp">1</p>
+            </div>
+            <div class="joked">
+              <h3 class="questionned"></h3>
+              <h3 class="responded"></h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script>
+      let jokes = [
+        {
+          id: "0",
+          question: 'Why do we tell actors to "Break a leg ?"',
+          response: "Because every play has a cast",
+        },
+        {
+          id: "1",
+          question: "What's the best thing about Switzerland ?",
+          response: "I don't know but their flag is a big plus !",
+        },
+        {
+          id: "2",
+          question: "Where do you find a cow with no legs ?",
+          response: "Right where you left it !",
+        },
+        {
+          id: "3",
+          question: "Why did the oreo go to the dentist ?",
+          response: "Because he lost his filling !",
+        },
+        {
+          id: "4",
+          question:
+            "Did you hear about the mathematician who's afraid of negative numbers ?",
+          response: "He'll stop at nothing to avoid them.",
+        },
+        {
+          id: "0",
+          question:
+            "A bear walks into a bar and says, “Give me a whiskey and … cola.”",
+          response:
+            "“Why the big pause?” asks the bartender. The bear shrugged. “I'm not sure; I was born with them.”",
+        },
+        {
+          id: "6",
+          question:
+            "Yesterday I saw a guy spill all his Scrabble letters on the road.",
+          response: "I asked him, “What's the word on the street?",
+        },
+        {
+          id: "0",
+          question:
+            "Did you hear about the actor who fell through the floorboards?",
+          response: "He was just going through a stage.",
+        },
+        {
+          id: "0",
+          question: "Where are average things manufactured?",
+          response: "The satisfactory.",
+        },
+        {
+          id: "0",
+          question: "How do you drown a hipster?",
+          response: "Throw him in the mainstream.",
+        },
+      ];
+      const coloredts = [
+        "black",
+        "green",
+        "yellow",
+        "orange",
+        "blue",
+        "red",
+        "pink",
+        "white",
+        "brown",
+      ];
+
+      function add() {
+        let a = document.getElementsByClassName("hiddenp")[0].innerHTML;
+        let joke = {};
+        joke.id = document.getElementsByClassName("hiddenp")[0].innerHTML;
+        joke.question = document.getElementsByClassName("question")[0].value;
+        joke.response = document.getElementsByClassName("response")[0].value;
+        console.log("added to json : " + joke);
+        document.getElementsByClassName("hiddenp")[0].innerHTML =
+          parseFloat(document.getElementsByClassName("hiddenp")[0].innerHTML) +
+          1;
+        jokes.push(joke);
+        console.log(document.getElementsByClassName("hiddenp")[0].innerHTML);
+        console.log(jokes[1].question);
+      }
+      function shoted() {
+        let x = Math.floor(Math.random() * jokes.length);
+        let y = Math.floor(Math.random() * coloredts.length);
+        document.getElementsByClassName("joked")[0].style.backgroundColor =
+          coloredts[y];
+        document.getElementsByClassName("questionned")[0].innerHTML =
+          jokes[x].question;
+        document.getElementsByClassName("responded")[0].innerHTML =
+          jokes[x].response;
+        document.getElementsByClassName("joked")[0].style.display = "block";
+        console.log(jokes[0].question);
+      }
+      setTimeout(shoted, 500);
+      function addjson() {
+        var json = JSON.stringify(jokes);
+        var fs = require("fs");
+        fs.writeFile("myjsonfile.json", json, "utf8", callback);
+      }
+    </script>
+    <!-- ----------------------------------- END THE JOKE OF THE DAY ------------------------------------------- -->
+
+    <!-- ----------------------------------- THE TO DO LIST ------------------------------------------- -->
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Caveat&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Caveat&display=swap");
+
+      .to-do-list {
+        background-color: aliceblue;
+        background-image: url("https://c0.wallpaperflare.com/preview/34/705/139/tasks-plan-target-list.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100vh;
+      }
+      .to-do-title {
+        font-family: "Caveat", cursive;
+        text-align: center;
+        font-size: 45pt;
+        font-weight: 800;
+        color: #100b08;
+        letter-spacing: 2px;
+      }
+      #ft_list {
+        display: flex;
+        flex-direction: column-reverse;
+        font-size: 28px;
+        color: #493425;
+        max-height: 530px;
+
+        width: 650px;
+        margin-left: 200px;
+        margin-top: 180px;
+        font-family: "Caveat", cursive;
+        overflow: hidden;
+      }
+      .form {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        padding: 40px;
+        border-radius: 40px;
+        background-color: #a37251;
+        border: 2px #271a12 solid;
+        display: none;
+      }
+      .exit {
+        float: right;
+        height: 30px;
+        width: 30px;
+        margin-top: -25px;
+        background: none;
+        border: none;
+      }
+      .fa-xmark {
+        color: #271a12;
+      }
+      .submit {
+        width: 70px;
+        padding: 8px 0px;
+        text-align: center;
+        background-color: #4e3828;
+        color: #a37251;
+        box-shadow: 0 9px #999;
+        border-radius: 15px;
+        font-size: 12pt;
+        font-weight: 600;
+
+        transition: all ease 0.3s;
+      }
+      .submit:active {
+        background-color: #3f2d20;
+        box-shadow: 0 5px #666;
+        transform: translateY(4px);
+      }
+
+      .todo-add-new-task {
+        border: none;
+        border-radius: 25px;
+        background-color: #e8dad1;
+        width: 250px;
+        height: 45px;
+      }
+      .neww {
+        width: 95px;
+        padding: 12px 0px;
+        font-size: 16pt;
+        overflow: hidden;
+        background-color: #573d2c;
+        color: #a37251;
+      }
+      .neww:hover {
+        background-color: #3f2d20;
+      }
+      .todoh3 {
+        color: #4c3525;
+      }
+    </style>
+    <section class="to-do-list" id="3">
+      <div class="the-list">
+        <h1 class="to-do-title">The To Do list</h1>
+        <button class="neww" onclick="formed()">
+          New <i class="fa-regular fa-square-plus"></i>
+        </button>
+      </div>
+      <div class="form">
+        <button class="exit" onclick="unformed()">
+          <i class="fa-solid fa-xmark fa-2x"></i>
+        </button>
+        <h3 class="todoh3">Type here what you want to add to your list</h3>
+        <input type="text" class="formedd todo-add-new-task" id="formedd" />
+        <button class="submit" onclick="newtodo()">Add</button>
+      </div>
+      <div class="geft" id="ft_list"></div>
+    </section>
+    <script>
+      let a = 0;
+      function formed() {
+        document.getElementsByClassName("form")[0].style.display = "block";
+      }
+      function unformed() {
+        document.getElementsByClassName("form")[0].style.display = "none";
+      }
+
+      function newtodo() {
+        const divisiion = document.createElement("div");
+        document.getElementById("ft_list").appendChild(divisiion);
+        divisiion.className = "divisiion";
+        divisiion.style.width = "550px";
+        divisiion.style.flexDirection = "column";
+
+        const todothing = document.createElement("h3");
+        todothing.className = "message";
+        divisiion.appendChild(todothing);
+        todothing.value = a;
+        todothing.style.color = "black";
+        todothing.innerHTML = " - " + document.getElementById("formedd").value;
+        todothing.onclick = function () {
+          buttonned(this.value);
+        };
+
+        const editdelete = document.createElement("div");
+        divisiion.appendChild(editdelete);
+        editdelete.className = "editdelete";
+        editdelete.style.backgroundColor = "#a37251";
+        editdelete.style.display = "none";
+
+        const editt = document.createElement("button");
+        editdelete.appendChild(editt);
+        editt.className = "editer";
+        editt.value = a;
+        editt.style.width = "40px";
+        editt.style.backgroundColor = "#573d2c";
+        editt.onclick = function () {
+          edited(this.value);
+        };
+
+        const spanned = document.createElement("i");
+        spanned.className = "fa-solid fa-pen-to-square";
+        editt.appendChild(spanned);
+        spanned.style.color = "white";
+
+        const deleter = document.createElement("button");
+        editdelete.appendChild(deleter);
+        deleter.style.backgroundColor = "#573d2c";
+        deleter.value = a;
+        deleter.style.width = "40px";
+        deleter.onclick = function () {
+          deletedd(this.value);
+        };
+
+        const trashcanned = document.createElement("i");
+        deleter.appendChild(trashcanned);
+        trashcanned.className = "fa-solid fa-trash-can";
+        trashcanned.style.color = "white";
+
+        const editeddiv = document.createElement("div");
+        editeddiv.className = "divedit";
+        editeddiv.style.display = "flex";
+        editeddiv.style.flexDirection = "row";
+        editeddiv.style.display = "none";
+        editdelete.appendChild(editeddiv);
+
+        const whattoedit = document.createElement("input");
+        editeddiv.appendChild(whattoedit);
+        whattoedit.type = "text";
+        whattoedit.className = "whattoedit";
+        whattoedit.value = todothing.innerHTML;
+        whattoedit.style.backgroundColor = "#a37251";
+        whattoedit.style.display = "block";
+        whattoedit.name = a;
+        console.log(divisiion);
+
+        const addbtn = document.createElement("button");
+        editeddiv.appendChild(addbtn);
+        addbtn.innerHTML = "Add";
+        addbtn.style.backgroundColor = "#a37251";
+        addbtn.style.color = "white";
+        addbtn.value = a;
+        addbtn.onclick = function () {
+          whattoedited(this.value);
+        };
+
+        a++;
+      }
+
+      function edited(element) {
+        if (
+          document.getElementsByClassName("divedit")[element].style.display ==
+          "none"
+        ) {
+          document.getElementsByClassName("whattoedit")[element].style.display =
+            "block";
+          document.getElementsByClassName("divedit")[element].style.display =
+            "flex";
+        } else {
+          document.getElementsByClassName("divedit")[element].style.display =
+            "none";
+        }
+      }
+      function buttonned(element) {
+        if (
+          document.getElementsByClassName("editdelete")[element].style
+            .display == "none"
+        ) {
+          document.getElementsByClassName("editdelete")[element].style.display =
+            "block";
+          document.getElementsByClassName("divedit")[element].style.display =
+            "none";
+        } else {
+          document.getElementsByClassName("editdelete")[element].style.display =
+            "none";
+        }
+      }
+      function deletedd(element) {
+        if (confirm("Are you sure you want to delete this note ?")) {
+          document.getElementsByClassName("divisiion")[element].remove();
+        }
+      }
+      function whattoedited(element) {
+        document.getElementsByClassName("message")[element].innerHTML =
+          document.getElementsByClassName("whattoedit")[element].value;
+      }
+    </script>
+    <!-- ----------------------------------- END TO DO LIST ------------------------------------------- -->
+    <!-- ----------------------------------- FIRST SEPARATION ------------------------------------------- -->
+    <style>
+      .separation {
+        height: 20vh;
+        align-items: center;
+        text-align: center;
+        background-image: linear-gradient(to bottom right, #5cc8ff, #d63c6b);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+      }
+      .separated {
+        font-size: 80pt;
+        color: #080b57;
+      }
+    </style>
+    <section class="separation" id="4">
+      <h1 class="separated">Numbers Games</h1>
+    </section>
+    <!-- ----------------------------------- END FIRST SEPARATION ------------------------------------------- -->
+
+    <!-- ----------------------------------- GUESS THE NUMBER ------------------------------------------- -->
+    <style>
+      .guess-the-number {
+        background-image: linear-gradient(to bottom right, #5cc8ff, #d63c6b);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        height: 100vh;
+        align-items: center;
+        align-content: center;
+      }
+      .operation {
+        display: flex;
+        flex-direction: row;
+        box-shadow: 0 19px 38px rgba(19, 19, 19, 0.24),
+          0 15px 12px rgba(19, 19, 19, 0.12);
+      }
+      .submit-the-number {
+        font-size: 40px;
+        text-align: center;
+        align-content: center;
+
+        width: 200px;
+        height: 80px;
+        background-color: #c41c4f;
+        border: none;
+        color: #292f36;
+        box-shadow: 0;
+        box-shadow: 0 19px 38px rgba(19, 19, 19, 0.54),
+          0 15px 12px rgba(19, 19, 19, 0.27);
+      }
+      .submit-the-number:hover {
+        background-color: #d63c6b;
+        color: black;
+      }
+      .firstin {
+        color: #5cc8ff;
+        background-color: #292f36;
+        border: none;
+        font-size: 32pt;
+        text-align: center;
+        height: 150px;
+        width: 400px;
+        margin-bottom: 30px;
+      }
+      .guess-the-number-left {
+        padding-left: 20px;
+      }
+      .guess-the-number-right {
+        margin-top: 350px;
+        text-align: center;
+
+        margin-left: -15px;
+      }
+      .number-higher-or-lower {
+        margin-bottom: 30px;
+      }
+      .staronne {
+        position: absolute;
+        height: 300px;
+        width: 300px;
+        margin-top: 100px;
+        margin-left: 300px;
+        display: none;
+      }
+      .startwo {
+        position: absolute;
+        height: 300px;
+        width: 300px;
+        right: 100px;
+        display: none;
+      }
+      .starthree {
+        position: absolute;
+        height: 300px;
+        width: 300px;
+        margin-top: 50vh;
+        right: 200px;
+        display: none;
+      }
+      .starfour {
+        position: absolute;
+        height: 300px;
+        width: 300px;
+        display: none;
+      }
+      .starfive {
+        position: absolute;
+        height: 300px;
+        width: 300px;
+        margin-left: 600px;
+        margin-top: 100;
+        display: none;
+      }
+      .starsix {
+        position: absolute;
+        height: 300px;
+        width: 300px;
+        margin-left: 120px;
+        margin-top: 50vh;
+        display: none;
+      }
+      .starseven {
+        position: absolute;
+        height: 300px;
+        width: 300px;
+        margin-left: 430px;
+        margin-top: 50vh;
+        display: none;
+      }
+    </style>
+    <section class="guess-the-number" id="5">
+      <div class="row">
+        <div class="col-md-6 guess-the-number-left">
+          <h1 class="guess-the-number-title titler">Guess The Right Number</h1>
+          <h3>Guess if it's higher or lower</h3>
+          <h4>
+            There is 100 more choice to decide wich number is the right one !
+          </h4>
+        </div>
+        <div class="col-md-6 guess-the-number-right">
+          <h2 class="number-higher-or-lower">
+            Lets Begin by writing your guessed number !
+          </h2>
+          <input type="number" name="" id="firstin" class="firstin" />
+          <div class="resultat">
+            <button class="submit-the-number" value="0" onclick="tryme()">
+              Try Me
+            </button>
+          </div>
+        </div>
+        <img
+          class="staronne guess-the-number-stars"
+          src="https://img1.picmix.com/output/stamp/normal/1/0/1/7/2107101_89cf6.gif"
+          alt=""
+        />
+        <img
+          class="startwo guess-the-number-stars"
+          src="https://img1.picmix.com/output/stamp/normal/1/0/1/7/2107101_89cf6.gif"
+          alt=""
+        />
+        <img
+          class="starthree guess-the-number-stars"
+          src="https://img1.picmix.com/output/stamp/normal/1/0/1/7/2107101_89cf6.gif"
+          alt=""
+        />
+        <img
+          class="starfour guess-the-number-stars"
+          src="https://img1.picmix.com/output/stamp/normal/1/0/1/7/2107101_89cf6.gif"
+          alt=""
+        />
+        <img
+          class="starfive guess-the-number-stars"
+          src="https://img1.picmix.com/output/stamp/normal/1/0/1/7/2107101_89cf6.gif"
+          alt=""
+        />
+        <img
+          class="starsix guess-the-number-stars"
+          src="https://img1.picmix.com/output/stamp/normal/1/0/1/7/2107101_89cf6.gif"
+          alt=""
+        />
+        <img
+          class="starseven guess-the-number-stars"
+          src="https://img1.picmix.com/output/stamp/normal/1/0/1/7/2107101_89cf6.gif"
+          alt=""
+        />
+      </div>
+      <div class="the-content-game-guess-number"></div>
+    </section>
+    <script>
+      let x = Math.floor(Math.random() * 100 + 1);
+      console.log(x);
+      let b = 0;
+      function tryme() {
+        let a = document.getElementsByClassName("firstin")[0].value;
+        if (a > x) {
+          document.getElementsByClassName(
+            "number-higher-or-lower"
+          )[0].innerHTML =
+            "The number you have guessed is to High from the right number ! Try Again.";
+          document.getElementsByClassName("firstin")[0].value = null;
+          b++;
+        } else if (a < x) {
+          document.getElementsByClassName(
+            "number-higher-or-lower"
+          )[0].innerHTML =
+            "The number you have guessed is to Low from the right number ! Try Again.";
+          document.getElementsByClassName("firstin")[0].value = null;
+          b++;
+        } else {
+          document.getElementsByClassName(
+            "number-higher-or-lower"
+          )[0].innerHTML =
+            "Congratulation ! You Found the Right Number in " +
+            b +
+            " Attemps !";
+          document.getElementsByClassName("firstin")[0].value = null;
+          b++;
+          document.getElementsByClassName("staronne")[0].style.display =
+            "block";
+          document.getElementsByClassName("startwo")[0].style.display = "block";
+          document.getElementsByClassName("starthree")[0].style.display =
+            "block";
+          document.getElementsByClassName("starfour")[0].style.display =
+            "block";
+          document.getElementsByClassName("starfive")[0].style.display =
+            "block";
+          document.getElementsByClassName("starsix")[0].style.display = "block";
+          document.getElementsByClassName("starseven")[0].style.display =
+            "block";
+        }
+      }
+      function hideallstars() {
+        document.getElementsByClassName("staronne")[0].style.display = "none";
+        document.getElementsByClassName("startwo")[0].style.display = "none";
+        document.getElementsByClassName("starthree")[0].style.display = "none";
+        document.getElementsByClassName("starfour")[0].style.display = "none";
+        document.getElementsByClassName("starfive")[0].style.display = "none";
+        document.getElementsByClassName("starsix")[0].style.display = "none";
+        document.getElementsByClassName("starseven")[0].style.display = "none";
+        document.getElementsByClassName("number-higher-or-lower")[0].innerHTML =
+          "If you want to play again reset the page.";
+        document.getElementsByClassName("firstin")[0].value = null;
+      }
+      let starimgs = document.getElementsByTagName("body")[0];
+      starimgs.addEventListener("keypress", function (event) {
+        if (event.key === "Enter") {
+          hideallstars();
+        }
+      });
+      //    let enternotbutton=document.getElementsByClassName("firstin")[0];
+      //    enternotbutton.addEventListener("keypress",function(event){
+      //     if(event.key === "Enter"){
+      //         tryme()
+      //     }
+      //    });
+    </script>
+    <!-- ----------------------------------- END GUESS THE NUMBER ------------------------------------------- -->
+    <!-- -----------------------------------  LEAP YEAR ------------------------------------------- -->
+    <style>
+      .leap-year {
+        background-image: linear-gradient(to bottom right, #5cc8ff, #d63c6b);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        height: 100vh;
+        align-items: center;
+        align-content: center;
+      }
+      .leap-year > .row > .guess-the-number-left {
+        text-align: end;
+      }
+    </style>
+    <section class="leap-year" id="6">
+      <div class="row">
+        <div class="col-md-6 guess-the-number-right">
+          <h2 class="number-higher-or-lower">
+            Lets Begin by writing your wanted year !
+          </h2>
+          <input type="number" name="" id="firstin" class="firstin" />
+          <div class="resultat">
+            <button class="submit-the-number" value="0" onclick="leap()">
+              Try Me
+            </button>
+          </div>
+        </div>
+        <div class="col-md-6 guess-the-number-left righted">
+          <h1 class="guess-the-number-title titler">Find The Leap Year</h1>
+          <h3>Type the wanted year and find out if it's a leap year.</h3>
+          <h4>A Leap Year has 366 days, it occur every 4 years !</h4>
+        </div>
+      </div>
+    </section>
+    <script>
+      function leap() {
+        let x = document.getElementsByClassName("firstin")[1].value;
+        console.log(x);
+        if (x % 4 == 0) {
+          document.getElementsByClassName(
+            "number-higher-or-lower"
+          )[1].innerHTML = "The Year " + x + " is a Leap Year !";
+        } else {
+          document.getElementsByClassName(
+            "number-higher-or-lower"
+          )[1].innerHTML = "The Year " + x + " isn't a Leap Year.";
+        }
+      }
+      let enternotbutton = document.getElementsByClassName("firstin")[1];
+      enternotbutton.addEventListener("keypress", function (event) {
+        if (event.key === "Enter") {
+          leap();
+        }
+      });
+    </script>
+    <!-- ----------------------------------- END END LEAP YEAR ------------------------------------------- -->
+    <!-- ----------------------------------- ARRAY SMALL BIG ------------------------------------------- -->
+    <style>
+      .array-smal-big-title {
+        font-size: 100pt;
+      }
+      .array-small-big {
+        background-image: linear-gradient(to bottom right, #5cc8ff, #d63c6b);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        height: 100vh;
+        align-items: center;
+        align-content: center;
+      }
+      .randomized-array {
+        font-size: 40px;
+        text-align: center;
+        align-content: center;
+
+        width: 200px;
+        height: 80px;
+        background-color: #5cc8ff;
+        border: none;
+        color: #292f36;
+        box-shadow: 0;
+        box-shadow: 0 19px 38px rgba(19, 19, 19, 0.54),
+          0 15px 12px rgba(19, 19, 19, 0.27);
+      }
+      .randomized-array:hover {
+        background-color: #00a3f5;
+        color: black;
+      }
+      .set-array {
+        font-size: 40px;
+        text-align: center;
+        align-content: center;
+
+        width: 200px;
+        height: 80px;
+        background-color: #5cff5c;
+        border: none;
+        color: #292f36;
+        box-shadow: 0;
+        box-shadow: 0 19px 38px rgba(19, 19, 19, 0.54),
+          0 15px 12px rgba(19, 19, 19, 0.27);
+      }
+      .set-array:hover {
+        background-color: #45f500;
+        color: black;
+      }
+    </style>
+    <section class="array-small-big" id="7">
+      <div class="row">
+        <div class="col-md-6 guess-the-number-left">
+          <h1 class="array-smal-big-title titler">
+            Biggest and Smallest Number of an Array
+          </h1>
+          <h3>Find the biggest and smallest number in the array.</h3>
+          <h4>
+            You can set the value of each element in the array of set a random
+            value.
+          </h4>
+        </div>
+        <div class="col-md-6 guess-the-number-right">
+          <h2 class="number-higher-or-lower">
+            Lets Begin by writing your guessed number !
+          </h2>
+          <input type="number" name="" id="firstin" class="firstin" />
+          <div class="resultat">
+            <button class="randomized-array" onclick="randomized()">
+              Random
+            </button>
+            <button class="set-array" onclick="set()">Set</button>
+            <button class="submit-the-number" value="0" onclick="finder()">
+              Try Me
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script>
+      let tabbl = [];
+      let randomarray = Math.floor(Math.random() * 100 + 2);
+
+      function set() {
+        tabbl.push(
+          parseFloat(document.getElementsByClassName("firstin")[2].value)
+        );
+        document.getElementsByClassName("firstin")[2].value = null;
+        console.log(tabbl);
+      }
+      function randomized() {
+        for (let i = 0; i < randomarray; i++) {
+          tabbl[i] = Math.floor(Math.random() * 1000);
+        }
+        console.log(tabbl);
+      }
+      function finder() {
+        let a = 0;
+        let b = 10000;
+        for (let i = 0; i < tabbl.length; i++) {
+          if (tabbl[i] > a) {
+            a = tabbl[i];
+          } else if (tabbl[i] < b) {
+            b = tabbl[i];
+          }
+        }
+        document.getElementsByClassName("number-higher-or-lower")[2].innerHTML =
+          "The Biggest number in the array is " +
+          a +
+          ". And the Smallest one is " +
+          b +
+          ".";
+      }
+      let enternotbuttontwo = document.getElementsByClassName("firstin")[2];
+      enternotbuttontwo.addEventListener("keypress", function (event) {
+        if (event.key === "Enter") {
+          set();
+        }
+      });
+    </script>
+    <!-- ----------------------------------- END ARRAY SMALL BIG ------------------------------------------- -->
+
+    <!-- ----------------------------------- NUMBER MULTIPLIED BY ITSELF ------------------------------------------- -->
+    <style>
+      .by-itself {
+        background-image: linear-gradient(to bottom right, #5cc8ff, #d63c6b);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        height: 100vh;
+        align-items: center;
+        align-content: center;
+      }
+    </style>
+    <section class="by-itself" id="8">
+      <div class="row">
+        <div class="col-md-6 guess-the-number-right">
+          <h2 class="number-higher-or-lower">
+            Lets Begin by writing your wanted number !
+          </h2>
+          <input type="number" name="" id="firstin" class="firstin" />
+          <div class="resultat">
+            <button class="submit-the-number" value="0" onclick="squared()">
+              Try Me
+            </button>
+          </div>
+        </div>
+        <div class="col-md-6 guess-the-number-left righted">
+          <h1 class="guess-the-number-title titler">
+            Number multiplied by itself
+          </h1>
+          <h3>Type the wanted number and calcul the value of its square.</h3>
+          <h4>
+            You can set the wanted value of your number and find out the value
+            of the number multiplied by itself
+          </h4>
+        </div>
+      </div>
+    </section>
+    <script>
+      function squared() {
+        let x = parseFloat(document.getElementsByClassName("firstin")[3].value);
+        console.log(x);
+        let y = x * x;
+        document.getElementsByClassName("number-higher-or-lower")[3].innerHTML =
+          "The number " + x + " multiplied by itself is " + y + ".";
+        document.getElementsByClassName("firstin")[3].value = null;
+      }
+      let enternotbuttonthree = document.getElementsByClassName("firstin")[3];
+      enternotbuttonthree.addEventListener("keypress", function (event) {
+        if (event.key === "Enter") {
+          squared();
+        }
+      });
+    </script>
+
+    <!-- ----------------------------------- END NUMBER MULTIPLIED BY ITSELF ------------------------------------------- -->
+
+    <!-- ----------------------------------- AVERAGE VALUE OF THE NUMBERS IN THE ARRAY ------------------------------------------- -->
+
+    <section class="array-small-big" id="9">
+      <div class="row">
+        <div class="col-md-6 guess-the-number-left">
+          <h1 class="array-smal-big-title titler">
+            Avergage Number in an Array
+          </h1>
+          <h3>Find the average number in the array.</h3>
+          <h4>
+            You can set the value of each element in the array of set a random
+            value.
+          </h4>
+        </div>
+        <div class="col-md-6 guess-the-number-right">
+          <h2 class="number-higher-or-lower">
+            Lets Begin by writing your guessed number !
+          </h2>
+          <input type="number" name="" id="firstin" class="firstin" />
+          <div class="resultat">
+            <button class="randomized-array" onclick="randomizedtwo()">
+              Random
+            </button>
+            <button class="set-array" onclick="settwo()">Set</button>
+            <button class="submit-the-number" value="0" onclick="findertwo()">
+              Try Me
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script>
+      let tabbltwo = [];
+      let randomarraytwo = Math.floor(Math.random() * 100 + 2);
+
+      function settwo() {
+        if (document.getElementsByClassName("firstin")[4].value == null) {
+          document.getElementsByClassName(
+            "number-higher-or-lower"
+          )[4].innerHTML = "You didn't type any number. Try again.";
+        } else {
+          tabbltwo.push(
+            parseFloat(document.getElementsByClassName("firstin")[4].value)
+          );
+          document.getElementsByClassName("firstin")[4].value = null;
+          console.log(tabbltwo);
+        }
+      }
+      function randomizedtwo() {
+        for (let i = 0; i < randomarraytwo; i++) {
+          tabbltwo[i] = Math.floor(Math.random() * 1000);
+        }
+        console.log(tabbltwo);
+      }
+      function findertwo() {
+        let a = 0;
+
+        for (let i = 0; i < tabbltwo.length; i++) {
+          a = a + tabbltwo[i];
+        }
+        console.log(a);
+        console.log(tabbltwo.length);
+        a = Math.round(a / tabbltwo.length);
+        console.log(a);
+
+        document.getElementsByClassName("number-higher-or-lower")[4].innerHTML =
+          "The Average number in the array is " + a + ".";
+      }
+      let enternotbuttonfour = document.getElementsByClassName("firstin")[4];
+      enternotbuttonfour.addEventListener("keypress", function (event) {
+        if (event.key === "Enter") {
+          settwo();
+        }
+      });
+    </script>
+    <!-- ----------------------------------- END AVERAGE VALUE OF THE NUMBERS IN THE ARRAY ------------------------------------------- -->
+
+    <!-- ----------------------------------- CALCULATOR ------------------------------------------- -->
+
+    <style>
+      .righted {
+        text-align: end;
+        margin-left: -15px;
+      }
+      .calc {
+        width: 320px;
+        margin-top: -100px;
+        box-shadow: 0 19px 38px rgb(19 19 19 / 54%),
+          0 15px 12px rgb(19 19 19 / 27%);
+        margin-left: 300px;
+      }
+      .row-one {
+        width: 320px;
+        display: flex;
+        flex-direction: row;
+        align-self: center;
+      }
+
+      .btn-number {
+        outline: none;
+        padding: 2rem;
+
+        font-size: 1.25rem;
+        border: none;
+        color: #5cc8ff;
+        background-color: #292f36;
+        height: 91px;
+        width: 80px;
+      }
+      .btn-number:hover {
+        color: #00a3f5;
+      }
+      .btn-operator {
+        outline: none;
+        padding: 2rem;
+        font-size: 1.25rem;
+        border: none;
+        width: 80px;
+        height: 91px;
+        color: #d63c6b;
+        background-color: #292f36;
+      }
+      .btn-operator:hover {
+        color: #c41c4f;
+      }
+      .btn-vir {
+        outline: none;
+        padding: 2rem;
+        text-align: center;
+        align-content: center;
+        font-size: 1.25rem;
+        border: none;
+        color: #efefef;
+        background-color: #292f36;
+        height: 91px;
+        width: 80px;
+      }
+      .btn-vir:hover {
+        color: #d6d6d6;
+      }
+      .btn-funct {
+        outline: none;
+        padding: 2rem;
+
+        font-size: 1.25rem;
+        border: none;
+        width: 160px;
+        height: 91px;
+        color: #d63c6b;
+        background-color: #292f36;
+      }
+      .btn-funct:hover {
+        color: #c41c4f;
+      }
+      .display {
+        width: 320px;
+        height: 75px;
+        border: none;
+        outline: none;
+        box-shadow: 0 4px 2px -2px rgba(19, 19, 19, 0.64);
+        padding-right: 10px;
+        padding-top: 12px;
+        overflow-y: hidden;
+        overflow-x: scroll;
+        background-color: rgba(19, 19, 19, 0.64);
+        font-size: 2rem;
+        line-height: 2;
+        color: #d63c6b;
+        text-align: right;
+        border-bottom: 15px black solid;
+        /* white-space: nowrap; */
+      }
+    </style>
+    <section class="by-itself" id="10">
+      <div class="row">
+        <div class="col-md-6 guess-the-number-right">
+          <div class="calc">
+            <input id="displayed" class="display" type="text" value="0" />
+            <div class="row-one">
+              <button class="btn-number" value="1" onclick="one()">1</button>
+              <button class="btn-number" value="2" onclick="two()">2</button>
+              <button class="btn-number" value="3" onclick="three()">3</button>
+              <button class="btn-operator" value="+" onclick="plus()">+</button>
+            </div>
+            <div class="row-one">
+              <button class="btn-number" value="4" onclick="four()">4</button>
+              <button class="btn-number" value="5" onclick="five()">5</button>
+              <button class="btn-number" value="6" onclick="six()">6</button>
+              <button class="btn-operator" value="-" onclick="minus()">
+                -
+              </button>
+            </div>
+            <div class="row-one">
+              <button class="btn-number" value="7" onclick="seven()">7</button>
+              <button class="btn-number" value="8" onclick="eight()">8</button>
+              <button class="btn-number" value="9" onclick="nine()">9</button>
+              <button class="btn-operator" value="*" onclick="times()">
+                x
+              </button>
+            </div>
+            <div class="row-one">
+              <button class="btn-vir" value=".">,</button>
+              <button class="btn-number" value="0" onclick="zero()">0</button>
+              <button class="btn-operator" value="%" onclick="modulo()">
+                %
+              </button>
+              <button class="btn-operator" value="/" onclick="dividedby()">
+                /
+              </button>
+            </div>
+            <div class="row-one">
+              <button
+                class="btn-clear btn-funct"
+                value="0"
+                onclick="cleareed()"
+              >
+                Clear
+              </button>
+              <button
+                class="btn-submit btn-funct"
+                value="submit"
+                onclick="calcul()"
+              >
+                Try Me
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 guess-the-number-left righted">
+          <h1 class="guess-the-number-title titler">Simple Calcul- ator</h1>
+          <h3>Type the wanted number and calcul the value using operators.</h3>
+          <h4>
+            This simple calculator allows you to sum, substract, multiply,
+            divide and check the rest of a division by a number.
+          </h4>
+        </div>
+      </div>
+    </section>
+    <script>
+      function plus() {
+        document.getElementById("displayed").value =
+          document.getElementById("displayed").value +
+          document.getElementsByClassName("btn-operator")[0].value;
+      }
+
+      function minus() {
+        document.getElementById("displayed").value =
+          document.getElementById("displayed").value +
+          document.getElementsByClassName("btn-operator")[1].value;
+      }
+      function times() {
+        document.getElementById("displayed").value =
+          document.getElementById("displayed").value +
+          document.getElementsByClassName("btn-operator")[2].value;
+      }
+      function dividedby() {
+        document.getElementById("displayed").value =
+          document.getElementById("displayed").value +
+          document.getElementsByClassName("btn-operator")[4].value;
+      }
+      function modulo() {
+        document.getElementById("displayed").value =
+          document.getElementById("displayed").value +
+          document.getElementsByClassName("btn-operator")[3].value;
+      }
+      function one() {
+        document.getElementById("displayed").value =
+          document.getElementById("displayed").value +
+          document.getElementsByClassName("btn-number")[0].value;
+      }
+      function two() {
+        document.getElementById("displayed").value =
+          document.getElementById("displayed").value +
+          document.getElementsByClassName("btn-number")[1].value;
+      }
+      function three() {
+        document.getElementById("displayed").value =
+          document.getElementById("displayed").value +
+          document.getElementsByClassName("btn-number")[2].value;
+      }
+      function four() {
+        document.getElementById("displayed").value =
+          document.getElementById("displayed").value +
+          document.getElementsByClassName("btn-number")[3].value;
+      }
+      function five() {
+        document.getElementById("displayed").value =
+          document.getElementById("displayed").value +
+          document.getElementsByClassName("btn-number")[4].value;
+      }
+      function six() {
+        document.getElementById("displayed").value =
+          document.getElementById("displayed").value +
+          document.getElementsByClassName("btn-number")[5].value;
+      }
+      function seven() {
+        document.getElementById("displayed").value =
+          document.getElementById("displayed").value +
+          document.getElementsByClassName("btn-number")[6].value;
+      }
+      function eight() {
+        document.getElementById("displayed").value =
+          document.getElementById("displayed").value +
+          document.getElementsByClassName("btn-number")[7].value;
+      }
+      function nine() {
+        document.getElementById("displayed").value =
+          document.getElementById("displayed").value +
+          document.getElementsByClassName("btn-number")[8].value;
+      }
+      function zero() {
+        document.getElementById("displayed").value =
+          document.getElementById("displayed").value +
+          document.getElementsByClassName("btn-number")[9].value;
+      }
+      function cleareed() {
+        document.getElementById("displayed").value = null;
+      }
+      //   if (document.getElementsByClassName("display")[0].value == null) {
+      //     document.getElementsByClassName("display")[0].value = "0";
+      //   }
+      console.log(document.getElementsByClassName("display")[0].innerHTML);
+
+      function calcul() {
+        let x = eval(document.getElementById("displayed").value);
+        document.getElementById("displayed").value = x;
+
+        console.log(x);
+      }
+    </script>
+    <!-- ----------------------------------- END CALCULATOR ------------------------------------------- -->
+
+    <!-- ----------------------------------- TEMPERATURE CONVERTER ------------------------------------------- -->
+    <style>
+      .temp-converter-title {
+        font-size: 100pt;
+      }
+    </style>
+    <section class="guess-the-number" id="11">
+      <div class="row">
+        <div class="col-md-6 guess-the-number-left">
+          <h1 class="temp-converter-title titler">
+            Simple temperature converter
+          </h1>
+          <h3>Find the temperature's value</h3>
+          <h4>
+            Type your wanted temperature in Celsium and it will be displayed in
+            Fahrenheit
+          </h4>
+        </div>
+        <div class="col-md-6 guess-the-number-right">
+          <h2 class="number-higher-or-lower">
+            Lets Begin by writing your guessed temperature value !
+          </h2>
+          <input type="number" name="" id="firstin" class="firstin" />
+          <div class="resultat">
+            <button class="submit-the-number" value="0" onclick="convert()">
+              Try Me
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script>
+      function convert() {
+        let x = document.getElementsByClassName("firstin")[5].value;
+        let y = x * 1.8 + 32;
+        document.getElementsByClassName("number-higher-or-lower")[5].innerHTML =
+          "The Termperature you have implemented is equal to " +
+          y +
+          " Fahrenheit degrees.";
+        document.getElementsByClassName("firstin")[5].value = null;
+      }
+      let enternotbuttonfive = document.getElementsByClassName("firstin")[5];
+      enternotbuttonfive.addEventListener("keypress", function (event) {
+        if (event.key === "Enter") {
+          convert();
+        }
+      });
+    </script>
+    <!-- ----------------------------------- END TEMPERATURE CONVERTER ------------------------------------------- -->
+    <!-- ----------------------------------- FIRST SEPARATION ------------------------------------------- -->
+    <style>
+      .separation-second {
+        height: 20vh;
+        align-items: center;
+        text-align: center;
+        background-image: linear-gradient(to bottom right, #6fff5c, #d6933c);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+      }
+      .separated {
+        font-size: 80pt;
+        color: #080b57;
+      }
+    </style>
+    <section class="separation-second" id="12">
+      <h1 class="separated">Letters Games</h1>
+    </section>
+    <!-- ----------------------------------- END FIRST SEPARATION ------------------------------------------- -->
+
+    <!-- ----------------------------------- REVERSE ORDER SENTENCE ------------------------------------------- -->
+    <style>
+      .letter-side {
+        background-image: linear-gradient(to bottom right, #6fff5c, #d6933c);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        height: 100vh;
+      }
+      .secondin {
+        color: #5cc8ff;
+        background-color: #292f36;
+        border: none;
+        font-size: 32pt;
+        text-align: center;
+        height: 150px;
+        width: 400px;
+        margin-bottom: 30px;
+      }
+    </style>
+    <section class="letter-side" id="13">
+      <div class="row">
+        <div class="col-md-6 guess-the-number-right">
+          <h2 class="number-higher-or-lower">
+            Lets Begin by writing your wanted sentence !
+          </h2>
+          <input type="text" name="input-letter" class="secondin" />
+          <div class="resultat">
+            <button class="submit-the-number" value="0" onclick="reversed()">
+              Try Me
+            </button>
+          </div>
+        </div>
+        <div class="col-md-6 guess-the-number-left righted">
+          <h1 class="guess-the-number-title titler">Reverse order Sentence</h1>
+          <h3>
+            Type the wanted sentence and the reversed one will be displayed.
+          </h3>
+          <h4>
+            You can type all the character needed in the sentence. After you
+            click on the button the sentence will be displayed in the reverse
+            order.
+          </h4>
+        </div>
+      </div>
+    </section>
+    <script>
+      function reversed() {
+        let sentenced = document.getElementsByClassName("secondin")[0].value;
+
+        const sentarray = sentenced.split(" ");
+
+        let sentencefinal = [];
+        for (let i = 0; i < sentarray.length; i++) {
+          sentencefinal.unshift(sentarray[i]);
+        }
+
+        let finalized = sentencefinal.join(" ");
+        document.getElementsByClassName("number-higher-or-lower")[6].innerHTML =
+          "The reversed sentence displayed is : " + finalized;
+        document.getElementsByClassName("secondin")[0].value = null;
+      }
+
+      let enternotbuttonsix = document.getElementsByClassName("secondin")[0];
+      enternotbuttonsix.addEventListener("keypress", function (event) {
+        if (event.key === "Enter") {
+          reversed();
+        }
+      });
+    </script>
+    <!-- ----------------------------------- END REVERSE ORDER SENTENCE ------------------------------------------- -->
+
+    <!-- ----------------------------------- SENTENCE TO UPPER CASE ------------------------------------------- -->
+
+    <section class="letter-side" id="14">
+      <div class="row">
+        <div class="col-md-6 guess-the-number-left">
+          <h1 class="guess-the-number-title titler">Sentence in upper case</h1>
+          <h3>
+            Type the wanted sentence and it will be display in upper case.
+          </h3>
+          <h4>
+            You can type all the character needed in the sentence. After you
+            click on the button the sentence will be displayed in upper case.
+          </h4>
+        </div>
+        <div class="col-md-6 guess-the-number-right">
+          <h2 class="number-higher-or-lower">
+            Lets Begin by writing your wanted sentence !
+          </h2>
+          <input type="text" name="input-letter" class="secondin" />
+          <div class="resultat">
+            <button class="submit-the-number" value="0" onclick="uppercased()">
+              Try Me
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script>
+      function uppercased() {
+        let charr = document.getElementsByClassName("secondin")[1].value;
+        let final = charr.toUpperCase();
+        document.getElementsByClassName("number-higher-or-lower")[7].innerHTML =
+          "The sentence displayed in uppercase is : " + final;
+        document.getElementsByClassName("secondin")[0].value = null;
+      }
+      let enternotbuttonseven = document.getElementsByClassName("secondin")[1];
+      enternotbuttonseven.addEventListener("keypress", function (event) {
+        if (event.key === "Enter") {
+          uppercased();
+        }
+      });
+    </script>
+    <!-- -----------------------------------END SENTENCE TO UPPER CASE ------------------------------------------- -->
+  </body>
+</html>
